@@ -5,7 +5,7 @@ export async function getArticles(
   pageNumber: string | undefined
 ): Promise<Article[]> {
   const res = await fetch(
-    `http://localhost:3000/api/articles?pageNumber=${pageNumber}`,
+    `https://next-six-fawn.vercel.app/api/articles?pageNumber=${pageNumber}`,
     { cache: "no-cache" }
   );
   if (!res.ok) {
@@ -15,7 +15,7 @@ export async function getArticles(
 }
 
 export async function getArticlesCount(): Promise<number> {
-  const res = await fetch(`http://localhost:3000/api/articles/count`,
+  const res = await fetch(`hhttps://next-six-fawn.vercel.app/api/articles/count`,
     { cache: "no-cache" }
   );
   if (!res.ok) {
@@ -29,7 +29,7 @@ export async function getArticlesBasedOnSearch(
   searchText: string
 ): Promise<Article[]> {
   const res = await fetch(
-    `http://localhost:3000/api/articles/search?searchText=${searchText}`
+    `https://next-six-fawn.vercel.app/api/articles/search?searchText=${searchText}`
   );
   if (!res.ok) {
     throw new Error("failed to fetch articles");
@@ -40,7 +40,7 @@ export async function getArticlesBasedOnSearch(
 export async function getSingleArticle(
   articleId: string
 ): Promise<SingleArticle> {
-  const res = await fetch(`http://localhost:3000/api/articles/${articleId}`, {
+  const res = await fetch(`https://next-six-fawn.vercel.app/api/articles/${articleId}`, {
     cache: "no-cache",
   });
   if (!res.ok) {

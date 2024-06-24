@@ -18,7 +18,7 @@ const CommentItem = ({ comment, userId }: CommentItemProps) => {
   const commentDeleteHandler = async () => {
     try {
       if(confirm("Are you sure you want to delete this comment?")){
-        await axios.delete("http://localhost:3000/api/comments/" + comment.id);
+        await axios.delete("https://next-six-fawn.vercel.app/api/comments/" + comment.id);
         router.refresh();
       }
       }

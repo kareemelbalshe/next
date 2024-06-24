@@ -17,7 +17,7 @@ const AddArticleForm = () => {
     if (description === "") return toast.error("Description is required");
 
     try {
-      await axios.post(`http://localhost:3000/api/articles`, {
+      await axios.post(`https://next-six-fawn.vercel.app/api/articles`, {
         title: title,
         description: description,
       });

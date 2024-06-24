@@ -8,7 +8,7 @@ const LogoutButton = () => {
     const router=useRouter()
     const logoutHandler = async () => {
         try {
-            await axios.get('http://localhost:3000/api/users/logout')
+            await axios.get('https://next-six-fawn.vercel.app/api/users/logout')
             router.push('/')
             router.refresh()
         } catch (error) {

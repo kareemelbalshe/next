@@ -18,7 +18,7 @@ const LoginForm = () => {
     if (password === "") return toast.error("password is required");
     try {
       setLoading(true);
-      await axios.post("http://localhost:3000/api/users/login", {
+      await axios.post("https://next-six-fawn.vercel.app/api/users/login", {
         email,
         password,
       });

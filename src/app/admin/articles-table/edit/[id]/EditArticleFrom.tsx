@@ -20,7 +20,7 @@ const EditArticleForm = ({ article }: EditArticleFormProps) => {
     if (description === "") return toast.error("Description is required");
 
     try {
-      await axios.put(`http://localhost:3000/api/articles/${article.id}`, {
+      await axios.put(`https://next-six-fawn.vercel.app/api/articles/${article.id}`, {
         title,
         description,
       });

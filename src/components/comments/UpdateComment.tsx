@@ -20,7 +20,7 @@ const  UpdateComment = ({ setOpen , text , commentId }: UpdateCommentProps) => {
             return toast.info("Please enter a comment")
         }
         try{
-            await axios.put(`http://localhost:3000/api/comments/${commentId}`,{
+            await axios.put(`https://next-six-fawn.vercel.app/api/comments/${commentId}`,{
                 text:updateText
             })
             router.refresh()

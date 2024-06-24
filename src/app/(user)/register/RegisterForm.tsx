@@ -20,7 +20,7 @@ const RegisterForm = () => {
     console.log({ email, password });
     try {
       setLoading(true);
-      await axios.post("http://localhost:3000/api/users/register", {
+      await axios.post("https://next-six-fawn.vercel.app/api/users/register", {
         username,
         email,
         password,

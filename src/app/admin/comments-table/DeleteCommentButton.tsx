@@ -13,7 +13,7 @@ const DeleteCommentButton = ({ commentId }: DeleteCommentButtonProps) => {
   const deleteCommentHandler = async () => {
     try {
       if (confirm("you want to delete this comment, Are you sure?")) {
-        await axios.delete(`http://localhost:3000/api/comments/${commentId}`);
+        await axios.delete(`https://next-six-fawn.vercel.app/api/comments/${commentId}`);
         router.refresh();
         toast.success("comment deleted");
       }

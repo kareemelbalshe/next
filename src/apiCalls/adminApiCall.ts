@@ -2,7 +2,7 @@ import { Comment } from "@prisma/client";
 
 // Get all comments
 export async function getAllComments(token: string): Promise<Comment[]> {
-    const response = await fetch(`http://localhost:3000/api/comments`, {
+    const response = await fetch(`https://next-six-fawn.vercel.app/api/comments`, {
         headers: {
             Cookie: `jwtToken=${token}`
         }

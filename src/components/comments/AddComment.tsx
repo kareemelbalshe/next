@@ -17,7 +17,7 @@ const AddComment = ({articleId}:AddCommentProps) => {
     if(text==='')return toast.error('please write a comment')
 
       try{
-        await axios.post(`http://localhost:3000/api/comments`, {text, articleId})
+        await axios.post(`https://next-six-fawn.vercel.app/api/comments`, {text, articleId})
         router.refresh()
         setText('')
       }
