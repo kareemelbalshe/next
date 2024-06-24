@@ -15,7 +15,7 @@ export async function getArticles(
 }
 
 export async function getArticlesCount(): Promise<number> {
-  const res = await fetch(`hhttps://next-six-fawn.vercel.app/api/articles/count`,
+  const res = await fetch(`https://next-six-fawn.vercel.app/api/articles/count`,
     { cache: "no-cache" }
   );
   if (!res.ok) {
